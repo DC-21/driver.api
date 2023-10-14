@@ -6,43 +6,42 @@ using UserAuth.Api.Models;
 namespace UserAuth.Api.Controllers
 {
     [ApiController]
-    [Route("api/drivers")]
-    public class DriverController : ControllerBase
+    [Route("api/team")]
+    public class TeamController : ControllerBase
     {
         private readonly ApiDbContext _context;
 
-        public DriverController(ApiDbContext context)
+        public TeamController(ApiDbContext context)
         {
             _context = context;
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] DriverRequestDto driverDto)
+        public async Task<IActionResult> Post([FromBody] TeamRequestDto teamDto)
         {
             if (ModelState.IsValid)
             {
                 // Manually map properties from the DTO to the entity
-                var driver = new Driver
+                var team = new Team
                 {
-                    TeamId = driverDto.TeamId,
-                    Name = driverDto.Name,
-                    RacingNumber = driverDto.RacingNumber
+                    Name = teamDto.Name,
+                    Year = teamDto.Year,
                 };
 
-                _context.Drivers.Add(driver);
+                _context.Teams.Add(team);
 
                 // Use await with SaveChangesAsync
                 await _context.SaveChangesAsync();
 
                 // Create a response DTO if needed
-                var responseDto = new DriverResponseDto
+                var responseDto = new TeamResponseDto
                 {
-                    Id = driver.Id,
+                    Id = team.Id,
                     // Other properties
                 };
 
                 // Return the response
-                return CreatedAtRoute("GetDriver", new { id = responseDto.Id }, responseDto);
+                return CreatedAtRoute("GetTeam", new { id = responseDto.Id }, responseDto);
             }
 
             return BadRequest("Invalid request payload");
