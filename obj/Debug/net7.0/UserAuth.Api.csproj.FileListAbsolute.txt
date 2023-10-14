@@ -41,3 +41,5 @@
 /home/dice/UserAuth.Api/obj/Debug/net7.0/UserAuth.Api.pdb
 /home/dice/UserAuth.Api/obj/Debug/net7.0/UserAuth.Api.genruntimeconfig.cache
 /home/dice/UserAuth.Api/obj/Debug/net7.0/ref/UserAuth.Api.dll
+/home/dice/UserAuth.Api/bin/Debug/net7.0/AutoMapper.dll
+/home/dice/UserAuth.Api/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

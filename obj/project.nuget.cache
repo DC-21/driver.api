@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "W+n8QMMLBvutoDhMltjmoaYPT5TF+NXb12E1MD5891Y/qCl0yKpYN/foQ8yVGKysxWt+w9KxeZ477aF53yg2yg==",
+  "dgSpecHash": "grEoeNaJvrEmI8lGSQNY+J752fa6ZpRAwxJ3nk0pqR6xC83M8xgzWbJbb8MEY9EHqxRHbz/BokeJVJixBeyG7g==",
   "success": true,
   "projectFilePath": "/home/dice/UserAuth.Api/UserAuth.Api.csproj",
   "expectedPackageFiles": [
+    "/home/dice/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/home/dice/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/home/dice/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/dice/.nuget/packages/microsoft.aspnetcore.openapi/7.0.11/microsoft.aspnetcore.openapi.7.0.11.nupkg.sha512",
+    "/home/dice/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/dice/.nuget/packages/microsoft.entityframeworkcore/7.0.12/microsoft.entityframeworkcore.7.0.12.nupkg.sha512",
     "/home/dice/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.12/microsoft.entityframeworkcore.abstractions.7.0.12.nupkg.sha512",
     "/home/dice/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.12/microsoft.entityframeworkcore.analyzers.7.0.12.nupkg.sha512",
