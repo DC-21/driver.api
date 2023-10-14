@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "bCeKJa3OvnSzocGRK51t8oX7CdSBrqbEvxsuW2O9MaM=",
+  "Source": "UserAuth.Api",
+  "BasePath": "_content/UserAuth.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
