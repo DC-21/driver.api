@@ -30,15 +30,15 @@ namespace UserAuth.Api.Controllers
                 };
 
                 _context.Drivers.Add(driver);
-
-                // Use await with SaveChangesAsync
                 await _context.SaveChangesAsync();
 
                 // Create a response DTO if needed
                 var responseDto = new DriverResponseDto
                 {
                     Id = driver.Id,
-                    // Other properties
+                    Name = driver.Name,
+                    RacingNumber = driver.RacingNumber,
+                    // Other properties, if any
                 };
 
                 // Return the response
@@ -47,5 +47,28 @@ namespace UserAuth.Api.Controllers
 
             return BadRequest("Invalid request payload");
         }
+
+        [HttpGet("{id}", Name = "GetDriver")]
+        public async Task<IActionResult> Get(int id)
+        {
+            // Fetch the driver by ID and return it
+            var driver = await _context.Drivers.FindAsync(id);
+            if (driver == null)
+            {
+                return NotFound();
+            }
+
+            // Create a response DTO if needed and return it
+            var responseDto = new DriverResponseDto
+            {
+                Id = driver.Id,
+                Name = driver.Name,
+                RacingNumber = driver.RacingNumber,
+                // Other properties, if any
+            };
+
+            return Ok(responseDto);
+        }
     }
+
 }
