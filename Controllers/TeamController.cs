@@ -37,7 +37,9 @@ namespace UserAuth.Api.Controllers
                 var responseDto = new TeamResponseDto
                 {
                     Id = team.Id,
-                    // Other properties
+                    Name = team.Name,
+                    Year = team.Year,
+                    // Other properties, if any
                 };
 
                 // Return the response
@@ -46,5 +48,27 @@ namespace UserAuth.Api.Controllers
 
             return BadRequest("Invalid request payload");
         }
+        [HttpGet("{id}", Name = "GetTeam")]
+        public async Task<IActionResult> Get(int id)
+        {
+            // Fetch the team by ID and return it
+            var team = await _context.Teams.FindAsync(id);
+            if (team == null)
+            {
+                return NotFound();
+            }
+
+            // Create a response DTO if needed and return it
+            var responseDto = new TeamResponseDto
+            {
+                Id = team.Id,
+                Name = team.Name,
+                Year = team.Year,
+                // Other properties, if any
+            };
+
+            return Ok(responseDto);
+        }
+
     }
 }
