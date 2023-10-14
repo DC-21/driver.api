@@ -10,3 +10,8 @@ create class APiDbContext in Data and inherit its properties from DbContext
 embed DbContext and connection string in program.cs
 
 run : dotnet build to check for error and if it succeeds in build process then its to start building the models.
+to migrate run:
+dotnet ef migrations add "migration name"
+
+update:
+dotnet ef database update
